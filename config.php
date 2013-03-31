@@ -52,5 +52,6 @@ ClassLoader::import('LIBRARIES:dabl');
 $config_files = glob(CONFIG_DIR . '*.php');
 sort($config_files);
 foreach ($config_files as $filename) {
+	if($filename != CONFIG_DIR . 'injector.php')
 	require_once($filename);
 }
