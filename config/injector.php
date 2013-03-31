@@ -32,3 +32,9 @@
  *  	return $bound;
  *  });
  */
+
+$injector->bind('StdClass $mytest', function() {
+	$bound = new StdClass;
+	$bound->see = 'it worked!';
+	return $bound;
+});
