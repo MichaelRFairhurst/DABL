@@ -63,6 +63,17 @@ abstract class Controller extends ArrayObject {
 
 		$this->injector = new Injector;
 		$this->injector->configure();
+
+		/**
+		 * @todo move to a default injector configuration script
+		 */
+		if ($this->renderPartial) {
+			$this->injector->bind('Redirector', function() { return new PartialRedirector; });
+		} else if ('html' !== $this->outputFormat) {
+			$this->injector->bind('Redirector', function() { return new FormattedRedirector; });
+		} else if ($this->isRestful()) {
+			$this->injector->bind('Redirector', function() { return new RestRedirector; });
+		}
 	}
 
 	/**
@@ -227,6 +238,7 @@ abstract class Controller extends ArrayObject {
 	 * @param string $url Path to redirect to
 	 * @param bool $die Whether or not to kill the script
 	 * @return void
+	 * @deprecated use the injected Redirector
 	 */
 	function redirect($url = '', $die = true) {
 		if ($this->renderPartial) {
