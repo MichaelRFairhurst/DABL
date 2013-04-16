@@ -221,3 +221,67 @@ div.ui-state-highlight, div.ui-state-error{
 		width: auto;
 	}
 }
+
+div.test-type {
+	margin-left: 25px;
+	font-family: monospace;
+	margin-bottom: 25px;
+}
+
+div.test-count {
+	font-size: 13pt;
+	letter-spacing: 2px;
+}
+
+div.test-name {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+div.test-name a {
+	color: #365557;
+	text-decoration: none;
+}
+
+div.test-name a:hover {
+	color: #4B787A;
+}
+
+div.test-message {
+	margin-left: 18px;
+	line-height: 20px;
+}
+
+div.test-trace {
+	margin-left: 18px;
+	white-space: pre;
+}
+
+pre {
+	padding: 0 25px;
+	background-color: #DFDFDF;
+	border: 3px solid #ACACAC;
+	border-radius: 5px;
+}
+
+.meta-divider.meta-divider.meta-divider {
+	float: left;
+	padding-top: 4px;
+	padding-left: 10px;
+	margin-right: 5px;
+	box-shadow: 3px 4px 5px yellowGreen;
+	margin-left: 10px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	background: -moz-linear-gradient(-45deg,  rgba(122,191,103,0) 0%, rgba(122,191,103,0.14) 25%, rgba(153,204,50,0.47) 85%, rgba(153,204,50,0.55) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(122,191,103,0)), color-stop(25%,rgba(122,191,103,0.14)), color-stop(85%,rgba(153,204,50,0.47)), color-stop(100%,rgba(153,204,50,0.55))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  rgba(122,191,103,0) 0%,rgba(122,191,103,0.14) 25%,rgba(153,204,50,0.47) 85%,rgba(153,204,50,0.55) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  rgba(122,191,103,0) 0%,rgba(122,191,103,0.14) 25%,rgba(153,204,50,0.47) 85%,rgba(153,204,50,0.55) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  rgba(122,191,103,0) 0%,rgba(122,191,103,0.14) 25%,rgba(153,204,50,0.47) 85%,rgba(153,204,50,0.55) 100%); /* IE10+ */
+	background: linear-gradient(135deg,  rgba(122,191,103,0) 0%,rgba(122,191,103,0.14) 25%,rgba(153,204,50,0.47) 85%,rgba(153,204,50,0.55) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007abf67', endColorstr='#8c99cc32',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	margin-top: 1px;
+	border-radius: 2px;
+}
