@@ -69,6 +69,8 @@ abstract class Controller extends ArrayObject {
 		$this->setRoute($route);
 
 		$this->loadFlashValues();
+		$this->injector = new Injector;
+		$this->injector->configure();
 	}
 
 	/**
@@ -376,7 +378,7 @@ abstract class Controller extends ArrayObject {
 			file_not_found($view);
 		}
 
-		$result = call_user_func_array(array($this, $method_name), $args);
+		$result = $this->injector->invokeWithInjections($this, $method_name, $args);
 
 		if (!$this->loadView) {
 			return;
